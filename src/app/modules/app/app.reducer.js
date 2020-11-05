@@ -14,7 +14,7 @@ const appReducer = (state = initialState, action) => {
         case actionTypes.SET_STATE:
             newState = {
                 ...state,
-                [action.property]: action.content,
+                [action.payload.property]: action.payload.value,
             };
             break;
         case actionTypes.SET_FETCH_INIT:

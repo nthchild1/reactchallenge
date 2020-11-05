@@ -1,12 +1,9 @@
-import logo from './logo.svg';
+import React from "react";
+import MainPage from "./app/routes/MainPage/MainPage";
 
 function App() {
   return (
-    <div>
-        <form className="tsf" action="/search" id="tsf" method="GET" name="f" role="search">
-            <input/>
-        </form>
-    </div>
+      <MainPage/>
   );
 }
 

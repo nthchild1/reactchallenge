@@ -1,10 +1,12 @@
 export const prefixes = {
     appReducerPrefix: 'APP::',
+    searchAggregatorPrefix: 'SEARCH::'
 };
 
 export const TAGS = {
-    SEARCH_SERVICE: 'SEARCH_SERVICE',
-    APP_REDUCER: 'APP_REDUCER'
+    GOOGLE_SEARCH_SERVICE: 'GOOGLE_SEARCH_SERVICE:',
+    APP_REDUCER: 'APP_REDUCER:',
+    SEARCH_AGGREGATOR_REDUCER: 'SEARCH_AGGREGATOR_REDUCER:'
 };
 
 export const colors = {
@@ -15,3 +17,9 @@ export const colors = {
     tlalocGray: '#575e67',
     echoesBlue: '#8eafbc',
 };
+
+export const searchEngineOptions = {
+    bing: 'bing',
+    google: 'google',
+    both: 'both'
+}
