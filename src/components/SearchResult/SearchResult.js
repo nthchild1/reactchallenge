@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import {colors} from "../../app/constants/constants";
 
 const SearchResult = props => {
-    console.log(props);
-
     const {pagemap} = props;
     let image;
 
