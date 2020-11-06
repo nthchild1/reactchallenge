@@ -2,9 +2,9 @@ import axios from 'axios';
 
 class GoogleSearchService {
     constructor() {
-        this.API_KEY = process.env.GOOGLE_KEY;
-        this.GOOGLE_API_URL = process.env.GOOGLE_API_URL;
-        this.SEARCH_ENGINE_ID = process.env.SEARCH_ENGINE_ID;
+        this.API_KEY = process.env.REACT_APP_GOOGLE_KEY;
+        this.GOOGLE_API_URL = process.env.REACT_APP_GOOGLE_API_URL;
+        this.SEARCH_ENGINE_ID = process.env.REACT_APP_SEARCH_ENGINE_ID;
     }
 
     getSearchResults = (searchString, queries) => {
@@ -21,6 +21,7 @@ class GoogleSearchService {
                 (queryString, queryName, index) => `${queryString}${index !== 0 ? '&' : ''}${queryName}=${queries[queryName]}`, '?',
             )
             : ''}`;
+        console.log(url)
         return axios.get(url).then(({ data }) => data);
     }
 }

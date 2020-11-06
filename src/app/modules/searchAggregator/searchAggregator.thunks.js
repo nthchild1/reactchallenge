@@ -18,9 +18,13 @@ export const submitSearch = () => async (dispatch, getState) => {
             break;
         case searchEngineOptions.google:
             const googleSearchService = new GoogleSearchService();
-            return googleSearchService.getSearchResults(searchString)
-                .then(({data}) => {
-                    console.error(data);
+
+            await googleSearchService.getSearchResults(searchString)
+                .then((data) => {
+                    dispatch({
+                        type: actionTypes.SET_SEARCH_RESULTS,
+                        payload: data
+                    });
                 })
                 .catch((error) => {
                     console.error(`${constants.TAGS.GOOGLE_SEARCH_SERVICE} error getting Google search results`, error)

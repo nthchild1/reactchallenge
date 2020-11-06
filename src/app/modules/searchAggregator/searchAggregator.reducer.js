@@ -1,9 +1,9 @@
 import actionTypes from './searchAggregator.actionTypes';
 
 const initialState = {
-    selectedSearchEngine: undefined,
+    selectedSearchEngine: 'google',
     searchResults: [],
-    searchString: undefined
+    searchString: null
 };
 
 const searchAggregatorReducer = (state = initialState, action) => {

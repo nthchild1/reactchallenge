@@ -19,7 +19,7 @@ export const colors = {
 };
 
 export const searchEngineOptions = {
-    bing: 'bing',
     google: 'google',
+    bing: 'bing',
     both: 'both'
 }
