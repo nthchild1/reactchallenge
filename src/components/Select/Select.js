@@ -5,14 +5,12 @@ const Select = ({name, options, onChange}) => {
     return (
         <select name={name} onChange={onChange}>
             {Object.keys(options).map((optionKey) => {
-                return (<option value={options[optionKey]}>{optionKey}</option>)
+                return (<option key={options[optionKey]} value={options[optionKey]}>{optionKey}</option>)
             })}
         </select>
     );
 };
 
-Select.propTypes = {
-
-};
+Select.propTypes = {};
 
 export default Select;

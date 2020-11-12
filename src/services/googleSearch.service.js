@@ -7,11 +7,13 @@ class GoogleSearchService {
         this.SEARCH_ENGINE_ID = process.env.REACT_APP_SEARCH_ENGINE_ID;
     }
 
-    getSearchResults = (searchString, queries) => {
+    getSearchResults = (searchString, queries, num, page) => {
         return this.GETResource(searchString, {...queries,
             key: this.API_KEY,
             cx: this.SEARCH_ENGINE_ID,
-            q: searchString
+            q: searchString,
+            start: (page - 1) * num,
+            num,
         })
     }
 
@@ -21,8 +23,8 @@ class GoogleSearchService {
                 (queryString, queryName, index) => `${queryString}${index !== 0 ? '&' : ''}${queryName}=${queries[queryName]}`, '?',
             )
             : ''}`;
-        console.log(url)
         return axios.get(url).then(({ data }) => data);
     }
+
 }
 export default GoogleSearchService;

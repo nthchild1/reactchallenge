@@ -5,6 +5,7 @@ const initialState = {
     FETCH_INIT: false,
     FETCH_SUCCESS: false,
     FETCH_ERROR: false,
+    error: null,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -39,6 +40,7 @@ const appReducer = (state = initialState, action) => {
                 FETCH_INIT: false,
                 FETCH_SUCCESS: false,
                 FETCH_ERROR: true,
+                error: action.payload
             };
             break;
         default:

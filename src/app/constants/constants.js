@@ -24,3 +24,8 @@ export const searchEngineOptions = {
     bing: 'bing',
     both: 'both'
 }
+
+export const googleSearchServiceErrorMessages = {
+    NOTHING_FOUND: 'NOTHING_FOUND',
+    FETCH_ERROR: 'FETCH_ERROR'
+}

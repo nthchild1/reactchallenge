@@ -1,10 +1,10 @@
-import React from "react";
-import MainPage from "./app/routes/MainPage/MainPage";
+import React from 'react'
+import MainPage from './app/routes/MainPage/MainPage'
 
-function App() {
+function App () {
   return (
       <MainPage/>
-  );
+  )
 }
 
-export default App;
+export default App
